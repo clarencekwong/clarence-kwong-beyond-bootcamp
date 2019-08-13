@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" type="text/css" href="src/style.css" />
+		<script type="text/javascript" src="src/game.js"></script>
+		<title>Guess that Pokemon!</title>
+	</head>
+	<body>
+		<div class="container">
+			<section class="start_menu">
+				<img
+					class="title_logo"
+					src="src/Guess-That-Pokemon.png"
+					alt="Title Logo"
+				/>
+				<button class="start-btn">Start game</button>
+				<button class="instruction-btn">Instructions</button>
+			</section>
+			<section class="correct">
+				<h3>YOU ARE CORRECT!</h3>
+				<span class="correct-text"></span>
+				<canvas id="correct_pokemon"></canvas>
+				<button class="play_again_corr">Play Again?</button>
+			</section>
+			<section class="incorrect">
+				<h3>YOU ARE INCORRECT!</h3>
+				<span class="incorrect-text"></span>
+				<canvas id="incorrect_pokemon"></canvas>
+				<button class="play_again_incor">Play Again?</button>
+			</section>
+			<section class="instructions">
+				<h1>How to play</h1>
+				<p>Test your pokemon knowledge now with this simple quiz</p>
+				<p>
+					Just select one of the button with the Pokemon name that matches with
+					the silhouette of the pokemon
+				</p>
+			</section>
+			<section class="game">
+				<section class="pokemon_image">
+					<canvas id="greyed_pokemon"></canvas>
+				</section>
+				<section class="menu">
+					<div class="question_text">
+						Guess this pokemon!
+					</div>
+					<div class="menu_btn">
+						<button class="answer one"></button>
+						<button class="answer two"></button>
+						<button class="answer three"></button>
+						<button class="answer four"></button>
+					</div>
+				</section>
+			</section>
+		</div>
+	</body>
+</html>

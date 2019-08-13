@@ -1,0 +1,108 @@
+body {
+	background-color: #a599b5;
+	height: 100vh;
+	color: #2e2f2f;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 640px;
+	width: 100%;
+	max-height: 540px;
+	height: 100%;
+	background-color: whitesmoke;
+	border-radius: 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+	overflow: hidden;
+	align-items: center;
+}
+
+.title_logo {
+	width: 100%;
+}
+
+.start_menu,
+.instructions,
+.game,
+.correct,
+.incorrect {
+	height: 100%;
+	padding: 1em;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-flow: column;
+	flex-flow: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+
+.start_menu > button {
+	margin: 0.2em;
+}
+
+.start-btn,
+.instruction-btn,
+.answer,
+.play_again_corr,
+.play_again_incor {
+	background-color: whitesmoke;
+	border: 2px solid #a599b5;
+	color: #2e2f2f;
+	display: flex;
+	width: 45%;
+	border-radius: 5px;
+	padding: 1.5em;
+	font-size: 1em;
+	margin: 0.5em;
+	cursor: pointer;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.menu_btn {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.start-btn:hover,
+.instruction-btn:hover,
+.answer:hover {
+	background-color: #a599b5;
+}
+
+.question_text {
+	padding-left: 0.5em;
+}
+
+.correct,
+.incorrect,
+.game,
+.instructions {
+	display: none;
+}
+
+/* make text smaller when smaller than 580 */
