@@ -5,14 +5,11 @@ document.addEventListener("DOMContentLoaded", () => {
 	const startBtn = document.querySelector(".start-btn");
 	const correctPage = document.querySelector(".correct");
 	const incorrectPage = document.querySelector(".incorrect");
-	const playAgainBtnCorrect = document.querySelector(".play_again_corr");
-	const playAgainBtnIncorrect = document.querySelector(".play_again_incor");
+	const playAgainBtn = document.querySelectorAll(".play_again");
+	const homeBtn = document.querySelectorAll(".home_btn");
 	const correctText = document.querySelector(".correct-text");
 	const incorrectText = document.querySelector(".incorrect-text");
-	const btnOne = document.querySelector(".one");
-	const btnTwo = document.querySelector(".two");
-	const btnThree = document.querySelector(".three");
-	const btnFour = document.querySelector(".four");
+	const answerBtn = document.querySelectorAll(".answer");
 	const gameContainer = document.querySelector(".game");
 	const menuBtn = document.querySelector(".menu_btn");
 	const pokemonArray = [];
@@ -110,44 +107,30 @@ document.addEventListener("DOMContentLoaded", () => {
 		startGame();
 	});
 
-	playAgainBtnCorrect.addEventListener("click", () => {
-		startGame();
+	playAgainBtn.forEach(btn => {
+		btn.addEventListener("click", () => {
+			startGame();
+		});
 	});
 
-	playAgainBtnIncorrect.addEventListener("click", () => {
-		startGame();
+	answerBtn.forEach(btn => {
+		btn.addEventListener("click", e => {
+			if (guess(e.target.innerHTML)) {
+				correctGuess();
+			} else {
+				incorrectGuess();
+			}
+		});
 	});
 
-	btnOne.addEventListener("click", e => {
-		if (guess(e.target.innerHTML)) {
-			correctGuess();
-		} else {
-			incorrectGuess();
-		}
-	});
-
-	btnTwo.addEventListener("click", e => {
-		if (guess(e.target.innerHTML)) {
-			correctGuess();
-		} else {
-			incorrectGuess();
-		}
-	});
-
-	btnThree.addEventListener("click", e => {
-		if (guess(e.target.innerHTML)) {
-			correctGuess();
-		} else {
-			incorrectGuess();
-		}
-	});
-
-	btnFour.addEventListener("click", e => {
-		if (guess(e.target.innerHTML)) {
-			correctGuess();
-		} else {
-			incorrectGuess();
-		}
+	homeBtn.forEach(btn => {
+		btn.addEventListener("click", () => {
+			startMenu.style.display = "flex";
+			correctPage.style.display = "none";
+			incorrectPage.style.display = "none";
+			gameContainer.style.display = "none";
+			instructionPage.style.display = "none";
+		});
 	});
 
 	const startGame = () => {

@@ -2,6 +2,7 @@ body {
 	background-color: #a599b5;
 	height: 100vh;
 	color: #2e2f2f;
+	font-family: "Roboto", sans-serif;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -44,6 +45,7 @@ body {
 .game,
 .correct,
 .incorrect {
+	text-align: center;
 	height: 100%;
 	padding: 1em;
 	display: flex;
@@ -66,8 +68,8 @@ body {
 .start-btn,
 .instruction-btn,
 .answer,
-.play_again_corr,
-.play_again_incor {
+.play_again,
+.home_btn {
 	background-color: whitesmoke;
 	border: 2px solid #a599b5;
 	color: #2e2f2f;
@@ -102,7 +104,10 @@ body {
 .incorrect,
 .game,
 .instructions {
+	width: 100%;
 	display: none;
 }
 
-/* make text smaller when smaller than 580 */
+.answer {
+	text-transform: capitalize;
+}

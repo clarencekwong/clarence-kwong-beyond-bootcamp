@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" type="text/css" href="src/style.css" />
 		<script type="text/javascript" src="src/game.js"></script>
 		<title>Guess that Pokemon!</title>
@@ -23,21 +27,21 @@
 				<h3>YOU ARE CORRECT!</h3>
 				<span class="correct-text"></span>
 				<canvas id="correct_pokemon"></canvas>
-				<button class="play_again_corr">Play Again?</button>
+				<button class="play_again">Play Again?</button>
+				<button class="home_btn">Home Page</button>
 			</section>
 			<section class="incorrect">
 				<h3>YOU ARE INCORRECT!</h3>
 				<span class="incorrect-text"></span>
 				<canvas id="incorrect_pokemon"></canvas>
-				<button class="play_again_incor">Play Again?</button>
+				<button class="play_again">Play Again?</button>
+				<button class="home_btn">Home Page</button>
 			</section>
 			<section class="instructions">
 				<h1>How to play</h1>
 				<p>Test your pokemon knowledge now with this simple quiz</p>
-				<p>
-					Just select one of the button with the Pokemon name that matches with
-					the silhouette of the pokemon
-				</p>
+				<p>Select the pokemon that matches the image</p>
+				<button class="home_btn">Back</button>
 			</section>
 			<section class="game">
 				<section class="pokemon_image">
